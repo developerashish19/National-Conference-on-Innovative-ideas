@@ -1,71 +1,258 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>National Conference on Innovative Ideas for Startup | GEC Siwan </title>
+  <title>National Conference on Innovative Ideas for Startup | GEC Siwan</title>
+  <meta name="description" content="Join the National Conference on Innovative Ideas for Startup at GEC Siwan. Connect with entrepreneurs, industry experts, and students to explore the future of startups in India.">
+  <meta name="keywords" content="Startup, Conference, Innovation, GEC Siwan, Entrepreneurship, India">
   <link rel="icon" type="image/png" href="logo.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
-    *{margin:0;padding:0;box-sizing:border-box;font-family:Arial, sans-serif;}
-    body{line-height:1.6;background:#f9f9f9;color:#333;}
-    header{background:#0d1b2a;color:white;text-align:center;padding:60px 20px;}
-    header h1{font-size:2rem;margin-bottom:10px;}
-    header p{font-size:1rem;}
-    
-    /* Navbar */
-    nav{background:#1b263b;position:sticky;top:0;z-index:1000;box-shadow:0 2px 8px rgba(0,0,0,0.3);}
-    nav ul{display:flex;justify-content:center;list-style:none;transition:0.3s;}
-    nav ul li{margin:10px;}
-    nav ul li a{color:white;text-decoration:none;padding:8px 15px;transition:0.3s;}
-    nav ul li a:hover{background:#415a77;border-radius:5px;}
-    
-    section{padding:50px 20px;max-width:1000px;margin:auto;}
-    section h2{text-align:center;margin-bottom:20px;color:#0d1b2a;}
-    .objectives li,.themes li,.participants li,.outcomes li{margin:10px 0;}
-    
-    /* Cards Gallery */
-    .images{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px;margin-top:20px;}
-    .card{background:white;border-radius:10px;overflow:hidden;box-shadow:0 4px 10px rgba(0,0,0,0.2);transition:transform 0.3s;}
-    .card:hover{transform:translateY(-5px);}
-    .card img{width:100%;height:220px;object-fit:cover;}
-    .card p{text-align:center;padding:10px;font-weight:bold;color:#1b263b;}
-    
-    /* Shake animation */
-    @keyframes shake {
-      0% { transform: translateX(0px); }
-      25% { transform: translateX(-5px); }
-      50% { transform: translateX(5px); }
-      75% { transform: translateX(-5px); }
-      100% { transform: translateX(0px); }
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Arial, sans-serif; }
+    body { background: #f4f6fb; color: #222; line-height: 1.7; }
+    html { scroll-behavior: smooth; }
+    header {
+      background: linear-gradient(120deg, #0d1b2a 70%, #415a77 100%);
+      color: #fff;
+      text-align: center;
+      padding: 60px 20px 40px 20px;
+      position: relative;
+      overflow: hidden;
     }
-    .shake{animation:shake 0.4s;}
-    
-    footer{background:#1b263b;color:white;text-align:center;padding:20px;}
-    footer span{color:#ff6b6b;}
-    footer p{margin:5px 0;}
-    
-    /* Hamburger Menu */
-    .menu-toggle{display:none;flex-direction:column;cursor:pointer;padding:10px;}
-    .menu-toggle span{height:3px;width:25px;background:white;margin:4px 0;border-radius:2px;}
-    @media(max-width:768px){
-      nav ul{flex-direction:column;display:none;}
-      nav ul.show{display:flex;}
-      .menu-toggle{display:flex;justify-content:center;align-items:center;}
+    header img.logo {
+      width: 90px;
+      height: 90px;
+      border-radius: 50%;
+      margin-bottom: 20px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+      background: #fff;
+      object-fit: contain;
+    }
+    header h1 {
+      font-size: 2.3rem;
+      margin-bottom: 12px;
+      letter-spacing: 1px;
+      animation: fadeInDown 1s;
+    }
+    header p {
+      font-size: 1.1rem;
+      margin-bottom: 8px;
+      animation: fadeInUp 1.2s;
+    }
+    header .details {
+      font-size: 1rem;
+      margin-bottom: 0;
+      opacity: 0.95;
+    }
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    nav {
+      background: #1b263b;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    }
+    nav ul {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      list-style: none;
+      transition: 0.3s;
+    }
+    nav ul li {
+      margin: 10px 5px;
+    }
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      padding: 10px 18px;
+      font-size: 1rem;
+      border-radius: 6px;
+      transition: background 0.3s, color 0.3s;
+    }
+    nav ul li a:hover, nav ul li a:focus {
+      background: #415a77;
+      color: #ff6b6b;
+      outline: none;
+    }
+    .menu-toggle {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+      padding: 10px;
+    }
+    .menu-toggle span {
+      height: 3px;
+      width: 28px;
+      background: #fff;
+      margin: 5px 0;
+      border-radius: 2px;
+      transition: 0.3s;
+    }
+    section {
+      padding: 48px 20px;
+      max-width: 950px;
+      margin: auto;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 2px 16px rgba(0,0,0,0.07);
+      margin-top: 32px;
+      animation: fadeInUp 1s;
+    }
+    section h2 {
+      text-align: center;
+      margin-bottom: 22px;
+      color: #0d1b2a;
+      font-size: 1.7rem;
+      letter-spacing: 0.5px;
+    }
+    ul.objectives, ul.themes, ul.participants, ul.outcomes {
+      margin-left: 18px;
+      margin-bottom: 0;
+    }
+    ul li {
+      margin: 10px 0;
+      font-size: 1.05rem;
+    }
+    /* Gallery */
+    .images {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 22px;
+      margin-top: 20px;
+    }
+    .card {
+      background: #f4f6fb;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.13);
+      transition: transform 0.3s, box-shadow 0.3s;
+      cursor: pointer;
+      position: relative;
+    }
+    .card:hover {
+      transform: translateY(-7px) scale(1.03);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.18);
+    }
+    .card img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      display: block;
+      border-bottom: 1px solid #e0e0e0;
+    }
+    .card p {
+      text-align: center;
+      padding: 10px;
+      font-weight: 500;
+      color: #1b263b;
+      font-size: 1rem;
+    }
+    /* Lightbox */
+    .lightbox {
+      display: none;
+      position: fixed;
+      z-index: 2000;
+      left: 0; top: 0; width: 100vw; height: 100vh;
+      background: rgba(13,27,42,0.85);
+      justify-content: center;
+      align-items: center;
+      animation: fadeInDown 0.5s;
+    }
+    .lightbox img {
+      max-width: 90vw;
+      max-height: 80vh;
+      border-radius: 10px;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.25);
+    }
+    .lightbox .close {
+      position: absolute;
+      top: 30px;
+      right: 40px;
+      font-size: 2.2rem;
+      color: #fff;
+      cursor: pointer;
+      background: none;
+      border: none;
+    }
+    /* Back to Top */
+    #backToTop {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      background: #415a77;
+      color: #fff;
+      border: none;
+      border-radius: 50%;
+      width: 48px;
+      height: 48px;
+      font-size: 1.7rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.18);
+      cursor: pointer;
+      display: none;
+      z-index: 1500;
+      transition: background 0.3s;
+    }
+    #backToTop:hover {
+      background: #ff6b6b;
+    }
+    /* Footer */
+    footer {
+      background: #1b263b;
+      color: #fff;
+      text-align: center;
+      padding: 28px 10px 18px 10px;
+      margin-top: 40px;
+      font-size: 1rem;
+      border-radius: 0 0 12px 12px;
+    }
+    footer span { color: #ff6b6b; }
+    footer a { color: #ff6b6b; text-decoration: underline; }
+    .footer-icons {
+      margin: 12px 0 0 0;
+      font-size: 1.3rem;
+    }
+    .footer-icons a {
+      color: #fff;
+      margin: 0 8px;
+      transition: color 0.3s;
+    }
+    .footer-icons a:hover { color: #ff6b6b; }
+    /* Responsive */
+    @media (max-width: 900px) {
+      section { max-width: 98vw; }
+    }
+    @media (max-width: 768px) {
+      nav ul { flex-direction: column; display: none; }
+      nav ul.show { display: flex; }
+      .menu-toggle { display: flex; justify-content: center; align-items: center; }
+      section { padding: 32px 8px; margin-top: 18px; }
+      header { padding: 38px 8px 24px 8px; }
+      header h1 { font-size: 1.3rem; }
     }
   </style>
 </head>
 <body>
-
   <!-- Hero Section -->
-  <header id="home">
+  <header id="home" aria-label="Conference Hero">
+    <img src="logo.png" alt="GEC Siwan Logo" class="logo" />
     <h1>National Conference on "Innovative Ideas for Startup"</h1>
     <p>Organized by Startup Cell - Government Engineering College Siwan</p>
-    <p><strong>Date:</strong> October 13-14, 2025 | <strong>Venue:</strong> Seminar Hall 1, GEC Siwan</p>
+    <p class="details"><strong>Date:</strong> October 13-14, 2025 &nbsp;|&nbsp; <strong>Venue:</strong> Seminar Hall 1, GEC Siwan</p>
   </header>
 
   <!-- Navbar -->
-  <nav>
-    <div class="menu-toggle" id="menu-toggle">
+  <nav aria-label="Main Navigation">
+    <div class="menu-toggle" id="menu-toggle" aria-label="Toggle navigation" tabindex="0">
       <span></span>
       <span></span>
       <span></span>
@@ -87,13 +274,10 @@
   <section id="intro">
     <h2>Introduction</h2>
     <p>
-      Startups are rapidly emerging as the backbone of economic development, job creation, and technological advancement in India. 
-      In alignment with the Government of India’s Startup India Mission and various state-level entrepreneurship programs, there is a 
-      need to cultivate awareness, provide knowledge, and encourage innovation among students, entrepreneurs, and industry stakeholders.
+      Startups are rapidly emerging as the backbone of economic development, job creation, and technological advancement in India. In alignment with the Government of India’s Startup India Mission and various state-level entrepreneurship programs, there is a need to cultivate awareness, provide knowledge, and encourage innovation among students, entrepreneurs, and industry stakeholders.
     </p>
     <p>
-      This National Conference aims to bring together academicians, aspiring entrepreneurs, industry experts, investors, policymakers, 
-      and startup founders under one platform to share insights, success stories, challenges, and opportunities in the startup ecosystem.
+      This National Conference aims to bring together academicians, aspiring entrepreneurs, industry experts, investors, policymakers, and startup founders under one platform to share insights, success stories, challenges, and opportunities in the startup ecosystem.
     </p>
   </section>
 
@@ -159,10 +343,15 @@
   <section id="gallery">
     <h2>Gallery</h2>
     <div class="images">
-      <div class="card"><img src="principal.jpg" alt="Principal"><p></p></div>
-      <div class="card"><img src="students.jpg" alt="Student Group"><p></p></div>
-      <div class="card"><img src="speaker.jpg" alt="Speaker"><p></p></div>
-      <div class="card"><img src="banner.jpg" alt="Conference Banner"><p></p></div>
+      <div class="card" tabindex="0" aria-label="Principal"><img src="principal.jpg" alt="Principal of GEC Siwan giving welcome address"><p>Principal</p></div>
+      <div class="card" tabindex="0" aria-label="Student Group"><img src="students.jpg" alt="Group of students at the conference"><p>Student Group</p></div>
+      <div class="card" tabindex="0" aria-label="Speaker"><img src="speaker.jpg" alt="Keynote speaker presenting"><p>Speaker</p></div>
+      <div class="card" tabindex="0" aria-label="Conference Banner"><img src="banner.jpg" alt="National Conference Banner"><p>Conference Banner</p></div>
+    </div>
+    <!-- Lightbox Modal -->
+    <div class="lightbox" id="lightbox" aria-modal="true" role="dialog">
+      <button class="close" id="lightboxClose" aria-label="Close"><i class="fas fa-times"></i></button>
+      <img id="lightboxImg" src="" alt="Gallery Image" />
     </div>
   </section>
 
@@ -172,12 +361,25 @@
     <p><strong>Email for Abstract Submission:</strong> <a href="mailto:iisnationalconference@gmail.com">iisnationalconference@gmail.com</a></p>
     <p><strong>Venue:</strong> Government Engineering College Siwan, Seminar Hall 1</p>
     <p><strong>Dates:</strong> October 13-14, 2025</p>
+    <div class="footer-icons" aria-label="Social Links">
+      <a href="mailto:iisnationalconference@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
+      <a href="https://www.linkedin.com" target="_blank" rel="noopener" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+      <a href="https://twitter.com" target="_blank" rel="noopener" title="Twitter"><i class="fab fa-twitter"></i></a>
+    </div>
   </section>
+
+  <!-- Back to Top Button -->
+  <button id="backToTop" aria-label="Back to top"><i class="fas fa-chevron-up"></i></button>
 
   <!-- Footer -->
   <footer>
     <p>📍 National Conference on Innovative Ideas for Startup, held at Government Engineering College Siwan</p>
-    <p>📧 Abstract Submission Email: <a href="mailto:iisnationalconference@gmail.com" style="color:#ff6b6b;">iisnationalconference@gmail.com</a></p>
+    <p>📧 Abstract Submission Email: <a href="mailto:iisnationalconference@gmail.com">iisnationalconference@gmail.com</a></p>
+    <div class="footer-icons">
+      <a href="mailto:iisnationalconference@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
+      <a href="https://www.linkedin.com" target="_blank" rel="noopener" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+      <a href="https://twitter.com" target="_blank" rel="noopener" title="Twitter"><i class="fab fa-twitter"></i></a>
+    </div>
     <p>Built with <span>❤️</span> by Developer Ashish</p>
   </footer>
 
@@ -189,14 +391,59 @@
     menuToggle.addEventListener("click", () => {
       navLinks.classList.toggle("show");
     });
+    menuToggle.addEventListener("keypress", (e) => {
+      if (e.key === "Enter" || e.key === " ") navLinks.classList.toggle("show");
+    });
 
-    // Shake effect on card click
+    // Back to Top Button
+    const backToTop = document.getElementById("backToTop");
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 300) {
+        backToTop.style.display = "block";
+      } else {
+        backToTop.style.display = "none";
+      }
+    });
+    backToTop.addEventListener("click", () => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+
+    // Lightbox Gallery
     const cards = document.querySelectorAll(".card");
+    const lightbox = document.getElementById("lightbox");
+    const lightboxImg = document.getElementById("lightboxImg");
+    const lightboxClose = document.getElementById("lightboxClose");
     cards.forEach(card => {
       card.addEventListener("click", () => {
-        card.classList.add("shake");
-        setTimeout(()=> card.classList.remove("shake"), 400);
+        const img = card.querySelector("img");
+        lightboxImg.src = img.src;
+        lightboxImg.alt = img.alt;
+        lightbox.style.display = "flex";
       });
+      card.addEventListener("keypress", (e) => {
+        if (e.key === "Enter" || e.key === " ") {
+          const img = card.querySelector("img");
+          lightboxImg.src = img.src;
+          lightboxImg.alt = img.alt;
+          lightbox.style.display = "flex";
+        }
+      });
+    });
+    lightboxClose.addEventListener("click", () => {
+      lightbox.style.display = "none";
+      lightboxImg.src = "";
+    });
+    lightbox.addEventListener("click", (e) => {
+      if (e.target === lightbox) {
+        lightbox.style.display = "none";
+        lightboxImg.src = "";
+      }
+    });
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape" && lightbox.style.display === "flex") {
+        lightbox.style.display = "none";
+        lightboxImg.src = "";
+      }
     });
   </script>
 </body>
